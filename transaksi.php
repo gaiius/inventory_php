@@ -78,16 +78,16 @@ include('header.php');
 	<?php
 	for($i=1; $i <= 6; $i++) { ?>
 <tr>
-	<td><select id='id_barang_<?php echo $i;?>' name="id_barang[]">
+	<td><select id='id_barang_<?php echo $i;?>' name="id_barang[]" class="form-control">
 	<option value="">--pilih Barang -- </option>
 			<?php $cs=mysql_query("select * from barang");
 				while ($data=mysql_fetch_array($cs)) { ?>
 				<option value="<?php echo $data['id_barang'];?>"><?php echo $data['nama_barang'];?></option>
 				<?php }?>
 			</select></td>
-	<td><input type="text" id="qty_<?php echo $i;?>" name="qty[]"></td>
-	<td><input type="text" id="harga_<?php echo $i;?>"name="harga_jual[]"></td>
-	<td><input type="text" id="subtotal_<?php echo $i;?>"name="subtotal[]"></td>
+	<td><input type="text" id="qty_<?php echo $i;?>" name="qty[]" class="form-control"></td>
+	<td><input type="text" id="harga_<?php echo $i;?>"name="harga_jual[]" class="form-control"></td>
+	<td><input type="text" id="subtotal_<?php echo $i;?>"name="subtotal[]" class="form-control subtotal"></td>
 	</tr>
 	<script>
     $(document).ready(function(e) {
@@ -99,7 +99,6 @@ include('header.php');
                             success: function (value) {
                                 var data = value.split(",");
                                 $("#harga_<?php echo $i; ?>").val(data[0]);
-
                                 var price = Number($("#harga_<?php echo $i; ?>").val(data[0]));
                                 var qty = Number($("#qty_<?php echo $i; ?>").val())
                                 var sub = Number(price) * qty;
@@ -110,6 +109,23 @@ include('header.php');
                         });
 
                     });
+					$("#qty_<?php echo $i; ?>").blur(function(){
+						var qty=$(this).val();
+						var price=$("#harga_<?php echo $i; ?>").val();
+						var sub=qty*price;
+						console.log(sub);
+						$("#subtotal_<?php echo $i; ?>").val(sub);
+						sumAll();
+					});
+					function sumAll(){
+						var tot=0;
+						$(".subtotal").each(function () {
+							var v= Number($(this).val());
+							tot+=v;
+							console.log(v);
+							$("#tot").val(tot);
+						});
+					}
 	
 	});
 		
@@ -119,6 +135,10 @@ include('header.php');
 	
 	
 	} ?>
+	<tr>
+	<td>Total</td>
+	<td><input type="text" id="tot" ></td>
+	</tr>
 	<tr>
 		<td><input type="submit" name="save"></td>
 		</tr>
