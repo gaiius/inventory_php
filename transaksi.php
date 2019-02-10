@@ -126,7 +126,6 @@ include('header.php');
 							$("#tot").val(tot);
 						});
 					}
-	
 	});
 		
 		   </script>
