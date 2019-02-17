@@ -1,3 +1,5 @@
+
+
 Introduction
 ============
 
@@ -9,6 +11,7 @@ Introduction
 **AdminLTE** -- is a fully responsive admin template. Based on **[Bootstrap 3](https://github.com/twbs/bootstrap)** framework. Highly customizable and easy to use. Fits many screen resolutions from small mobile devices to large desktops. Check out the live preview now and see for yourself.
 
 **Download & Preview on [AdminLTE.IO](https://adminlte.io)**
+
 
 ### Looking for Premium Templates?
 **AdminLTE.IO just opened a new premium templates website. Hand picked to ensure the best quality and the most affordable prices. Visit https://themequarry.com for more information.**
@@ -55,3 +58,12 @@ AdminLTE 1.x can be easily upgraded to 2.x using [this guide](https://adminlte.i
 Donations are **greatly appreciated!**
 
 [![Donate](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif "AdminLTE Presentation")](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=629XCUSXBHCBC "Donate")
+
+My video 
+https://www.facebook.com/watch/?v=150445392521188
+
+Fans Page
+https://www.facebook.com/tutorialpemograman/
+
+Official Website
+https://educatecode.com/
